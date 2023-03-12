@@ -5,8 +5,9 @@
 }
 
 #frmMenu {
-    width: 400px;
+    width: 600px;
     height: 200px;
+    float: inline;
 }
 
 #totalPrice {
@@ -16,16 +17,9 @@
     float:right;
 }
 
-.left {
-    width: 200px;
-    height: 200px;
+.column {
     float: left;
-}
-
-.right {
     width: 200px;
-    height: 200px;
-    float: right;
 }
 
 #showText {
