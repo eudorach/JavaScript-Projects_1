@@ -12,7 +12,10 @@
 
             class likeButton extends React.Component {
                 constructor(props) {
+                    //constructor creates an object within a class
                     super(props);
+                    //proprs is short for properties
+                    //super calls a constructer
                     this.state = { liked: false };
                 }
 
@@ -24,6 +27,7 @@
                     return X(
                         'button',
                         { onClick: () => this.setState({ liked: true })},
+                        //setState schedules a UI update
                         'Like'
                     );
                 }

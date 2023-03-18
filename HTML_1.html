@@ -3,9 +3,11 @@
     <head>
         <meta charset="utf-8">
         <script src="./JavaScript/JS_1.js"></script>
+        <link rel="stylesheet" href="./CSS/html_1.css">
     </head>
     <body>
-        <h1>What is your favorite color?</h1>
+        <button class="sticky" type="submit" onclick="openForm()">Click to Open Form</button>
+        <h1 style="font-size: 4vw;">What is your favorite color?</h1>
         <h3>Pick your favorite color from this list:</h3>
         <ul>
             <li>Red</li>
@@ -23,8 +25,39 @@
         <h1 class="click">This text will change!</h1>
         <h3 class="click">This text will not change.</h3>
         <button onclick="hello_world_fxn()">Click</button>
-<br>
+       
+        <br>
         <canvas id="border" width="500" height="350" style="border:2px dotted black"></canvas>
-        
+        <form id="myForm" action="" onsubmit="return validateForm()" method="post">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lname" required><br>
+            <label for="number">Phone Number</label>
+            <input type="text" id="number" name="number" required><br>
+            <button type="submit" value="Submit">Submit</button>
+        </form>
+        <script>
+            function validateForm() {
+                let x = document.forms["myForm"]["fname","lname","number"].value;
+                if (x == "") {
+                    alert("All of the fields must be filled out")
+                    return false;
+                }
+            }
+        </script>
+
+        <button class="open-button" onclick="openForm()">Open Form</button>
+        <div class="form-popup" id="myForm_1">
+            <form action="" class="form-container">
+                <h1>Sign Up</h1>
+                <label for="email">Email</label>
+                <input type="text" placeholder="Enter Email" name="email" required><br>
+                <label for="psw">Password</label>
+                <input type="password" placeholder="Enter Password" name="psw" required><br>
+                <button type="submit" class="btn">Register</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
     </body>
 </html>

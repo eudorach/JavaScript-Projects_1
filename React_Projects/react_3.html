@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="jsx"></div>
+        <script type="text/babel">
+            class Greeting extends React.Componenet {
+                //React.Componenet is used to specify class or function
+                render() {
+                    //render() is used to create a function in React
+                    return <h1>Hi why does this not work</h1>
+                    //return statemenet returns information
+                }
+            }
+
+            ReactDOM.render(<Greeting />, document.getElementById('jsx'))
+        </script>
+    </body>
+</html>

@@ -44,4 +44,10 @@ ctx.fillRect(50, 50, 350, 100);
 // ctx.lineTo(500,350);
 // ctx.stroke();
 
+function openForm() {
+    document.getElementById("myForm_1").style.display = "block";
+}
 
+function closeForm() {
+    document.getElementById("myForm_1").style.display = "none";
+}

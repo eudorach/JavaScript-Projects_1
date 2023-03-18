@@ -9,19 +9,25 @@
         <div id="my_react_code"></div>
         <script>
             var counter=React.createClass({
+                //creates component classes
                 render: function() {
                     var time_Passed = Math.round(this.props.time_Passed / 100);
                     var seconds_Passed=time_Passed / 10 + (time_Passed % 10 ? '' : '.0');
+                    //? is a conditional operator that checks for whether or not a condition is true
+                    //% finds the remainder
                     var text='My React code started running.' + seconds_Passed + ' seconds ago!';
                     return React.DOM.p(null, text);
                 }
             });
 
             var counter_Factory = React.createFactory(Counter);
+            //React.crateFactory() is a function that generates a factory (object that can create other objects)
 
             var start_Counting = new Date().getTime();
             setInterval(function() {
+                //setInterval is a method that evalutes an exprsesion at specified intervals
                 ReactDom.render (
+                    //used to render a React Componenet or components
                     counter_Factory ({time_Passed: new Date().getTime() - start_Counting}),
                     document.getElementById('my_react_code')
                 );
